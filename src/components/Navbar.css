@@ -1,0 +1,7 @@
+#greenSwitch:checked{
+  background-color:green;
+  border-color: green;
+}
+#greenSwitch:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 128, 0, 0.25);
+}
