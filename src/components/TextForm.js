@@ -34,21 +34,21 @@ props.showAlert("Email in the text has been extracted","success");
   return (
     <>
     <div className="container" style={{color:props.mode=== 'dark'?'white':'#042743'}}>
-<h1>{props.heading}</h1> 
+<h1 className= 'mb-4'>{props.heading}</h1> 
 <div className="mb-3">
 
-<textarea className="form-control" value={text} onChange={handleOnChange} style= {{backgroundColor: props.mode=== 'dark'?'grey':'white' , color:props.mode=== 'dark'?'white':'#042743'}} id="myBox" rows="8"></textarea>
-<button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to uppercase</button>
-<button className="btn btn-primary mx-1" onClick={handleDownClick}>Convert to lowercase</button>
-<button className="btn btn-primary mx-1" onClick={handleClClick}>Clear Text</button>
-<button className="btn btn-primary my-2" onClick={handleExClick}>Extract the email</button>
+<textarea className="form-control" value={text} onChange={handleOnChange} style= {{backgroundColor: props.mode=== 'dark'?'#13466e':'white' , color:props.mode=== 'dark'?'white':'#042743'}} id="myBox" rows="8"></textarea>
+<button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to uppercase</button>
+<button disabled={text.length===0}  className="btn btn-primary mx-1 my-1" onClick={handleDownClick}>Convert to lowercase</button>
+<button disabled={text.length===0}  className="btn btn-primary mx-1 my-1" onClick={handleClClick}>Clear Text</button>
+<button disabled={text.length===0}  className="btn btn-primary mx-1 my-1" onClick={handleExClick}>Extract the email</button>
 </div>
 <div className="container my-3" style={{color:props.mode=== 'dark'?'white':'#042743'}}>
   <h2>Your text summary</h2>
-  <p>{text.split(" ").length} words and {text.length} characters</p>
-  <p>{0.008 * text.split(" ").length}Minutes read</p>
+  <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+  <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}Minutes read</p>
   <h2>Preview</h2>
-  <p>{text.length>0?text:"Enter something in the box to preview it"}</p>
+  <p>{text.length>0?text:"Nothing to preview "}</p>
   <h2>Extracted Emails</h2>
   {emailsFound.map((email, index)=>(
     <p key={index}>{email}</p>
