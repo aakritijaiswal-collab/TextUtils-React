@@ -6,7 +6,7 @@ import About from './components/About';
 import React, {useState} from 'react';
 import Alert from './components/Alert';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
  
@@ -25,7 +25,16 @@ function App() {
       setAlert(null);
     },2000);
   };
-    const toggleMode =()=> {
+const removeBodyClasses=()=>{
+  document.body.classList.remove('bg-light')
+  document.body.classList.remove('bg-dark')
+  document.body.classList.remove('bg-success')
+  document.body.classList.remove('bg-danger')
+  document.body.classList.remove('bg-warning')
+}
+
+    const toggleMode =()=> { 
+      
     if(mode === 'light'){
       setmode('dark');
       document.body.style.backgroundColor ='#042743';
@@ -37,12 +46,16 @@ function App() {
       showAlert("Light Mode has been enabled!","success");
     }
   }
+  const toggleTheme =(cls)=> { 
+      removeBodyClasses();
+      document.body.classList.add('bg-' +cls)
+  };
   return (
     <>
     {/*<Navbar title = "TextUtils"  aboutText = "About TextUtils"/>
     <Navbar/>*/}
     <Router>
-<Navbar title = "TextUtils" aboutText = "About TextUtils" mode={mode} toggleMode={toggleMode}/>
+<Navbar title = "TextUtils" aboutText = "About TextUtils" mode={mode} toggleMode={toggleMode} toggleTheme={toggleTheme}/>
 <Alert alert={alert}/>
 <div className="container my-3">
   <Switch>
