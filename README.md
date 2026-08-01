@@ -106,14 +106,11 @@ npm run deploy
 
 ## 📸 Screenshots
 
-> Add screenshots of:
->
-> * 🏠 Home Page
-> * 🌙 Dark Mode
-> * 🎨 Theme Color Palette
-> * ℹ️ About Page
+<img width="1920" height="965" alt="Screenshot (169)" src="https://github.com/user-attachments/assets/0d4c8568-3951-4a1c-96a9-604537405cac" />
+<img width="1920" height="963" alt="Screenshot (170)" src="https://github.com/user-attachments/assets/81c5d694-1dad-4911-9a32-29960afd871c" />
+<img width="1920" height="962" alt="Screenshot (172)" src="https://github.com/user-attachments/assets/30fe5716-8d60-44fd-8bc2-758123f148f0" />
+<img width="1920" height="960" alt="Screenshot (171)" src="https://github.com/user-attachments/assets/5f22e5a7-286b-4d15-b67f-1f6ae368fd85" />
 
----
 
 ## 💡 Future Enhancements
 
