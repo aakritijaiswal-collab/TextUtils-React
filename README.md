@@ -142,7 +142,7 @@ Contributions are welcome!
 **Aakriti Jaiswal**
 
 * GitHub: https://github.com/aakritijaiswal-collab
-*LinkedIn: https://www.linkedin.com/in/aakriti-jaiswal29
+* LinkedIn: https://www.linkedin.com/in/aakriti-jaiswal29
 ---
 
 ## ⭐ Support
